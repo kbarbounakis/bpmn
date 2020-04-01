@@ -4,7 +4,8 @@
   "description": "BPMN 2.0 execution engine",
   "main": "./lib/public.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "build-test": "babel spec --out-dir dist/spec --copy-files --source-maps"
   },
   "keywords": [
     "bpmn",
@@ -30,16 +31,24 @@
     "e2e-transaction-logger": "~0.1.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
     "@types/chai": "^4.2.3",
     "@types/jasmine": "^3.5.10",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "commander": ">= 2.0.0",
+    "dts-gen": "^0.6.0",
+    "es6-promisify": "^6.1.0",
     "istanbul": ">= 0.1.44",
     "jasmine": "^3.5.0",
     "jasmine-spec-reporter": "^5.0.1",
     "mocha": "^6.2.0",
-    "nodeunit": ">= 0.7.4"
+    "nodeunit": ">= 0.7.4",
+    "typescript": "^3.8.3"
   },
   "repository": "https://github.com/e2ebridge/bpmn.git",
   "author": "support@e2ebridge.com",

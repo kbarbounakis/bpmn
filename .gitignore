@@ -8,3 +8,5 @@ doc
 node_modules
 coverage
 nodeunit-output
+dist/
+.theia
